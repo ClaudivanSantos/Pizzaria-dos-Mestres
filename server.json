@@ -1,0 +1,57 @@
+{
+  "pizzas": [
+    {
+      "name": "Pizza de Calabreza",
+      "Price": 50,
+      "id": "6265f1sdf"
+    },
+    {
+      "name": "Pizza de Frango",
+      "Price": 50,
+      "id": "6265f16siisnf"
+    },
+    {
+      "name": "Pizza de Portuguesa",
+      "Price": 50,
+      "id": "6265f16s4fs"
+    }
+  ],
+  "Bebidas": [
+    {
+      "name": "Coca-cola 2l",
+      "Price": 10,
+      "id": "d1g5d41g54ds"
+    },
+    {
+      "name": "Coca-cola lata",
+      "Price": 5,
+      "id": "651g514g65df1f"
+    },
+    {
+      "name": "Pepsi lata",
+      "Price": 5,
+      "id": "84d89g4sd854scvc"
+    }
+  ],
+  "users": [
+    {
+      "nome": "affaf",
+      "bairro": "dgdgdf",
+      "rua": "dgszg",
+      "number": "6475",
+      "email": "claudivan.santos@lojasedmil.com.br",
+      "senha": "123",
+      "numero": "6475",
+      "id": "l0F7VD6"
+    },
+    {
+      "nome": "Claudivan",
+      "bairro": "Teste",
+      "rua": "teste",
+      "numero": "33",
+      "email": "sagfasdgsadgswg@fdh.com",
+      "senha": "222222",
+      "id": "SmkQ-ex"
+    }
+  ]
+}

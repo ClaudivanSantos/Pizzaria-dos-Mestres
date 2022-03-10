@@ -1,0 +1,142 @@
+
+
+.login {
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+
+.loginlogo img {
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    margin-bottom: -2px;
+    
+}
+
+.h1logo{
+    margin: 50px;
+}
+
+.loginright { 
+    align-items: center;
+    margin-left: 400px;
+    margin-right: 400px;
+    background-color: #d3d3d3;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.loginright h1 {
+    color: black;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.inputName, .inputAddress, .inputPassword, .inputEmail{
+    display: flex;
+    align-items: center;
+    color: gray;
+    background-color: white;
+    border-radius: 3px;
+    padding: 3px;
+    margin: 5px;
+    width: 98%;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.inputName svg, .inputAddress svg, .inputPassword svg, .inputEmail svg {
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+.inputName input, .inputAddress input, .inputPassword input, .inputEmail input {
+    color: black;
+    background: transparent;
+    width: 100%;
+    outline-width: 0;
+    border: none;
+    font-size: 17px;
+    margin-left: 12px;
+    margin-right: 10px;
+}
+
+.loginright button {
+    background-color: rgb(182, 37, 37);
+    color: white;
+    width: 98%;
+    font-weight: 500;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 25px;
+    border: none;
+    outline-width: 0;
+    cursor: pointer;
+} 
+
+.register{
+    margin-top: 10px;
+}
+
+.logineye {
+    align-items: center;
+    justify-content: center;
+    font-size: 30;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.errormessage{
+ color: red;
+}
+@media(max-width:2000px) {
+    .loginright h1 {
+        font-size: 2rem;
+    }
+    .loginright { 
+        margin-left: 500px;
+        margin-right: 500px;
+    }
+  
+}
+@media(max-width:1349px) {
+    .loginright h1 {
+        font-size: 2rem;
+    }
+    .loginright { 
+        margin-left: 400px;
+        margin-right: 400px;
+    }  
+}
+
+@media(max-width:1080px) {
+    .loginright h1 {
+        font-size: 2rem;
+    }
+    .loginright { 
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+  
+}
+@media(max-width:720px) {
+    .loginright h1 {
+        font-size: 2rem;
+    }
+    .loginright { 
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+
+
+
+
+
+
