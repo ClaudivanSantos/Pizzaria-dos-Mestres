@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FiMenu, FiShoppingCart } from "react-icons/fi";
 import { useHistory } from "react-router-dom";
-import Modal from 'react-modal';
+import CartModal from "../../components/CartModal/CartModal";
 
 import style from "./ToolBar.module.scss";
 import logo from "../../img/logo.png";
@@ -9,25 +9,23 @@ import { Link } from "react-router-dom";
 
 export default function ToolBar({ openSidebar }) {
   const history = useHistory();
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-function handleOpenModal(){
-  setIsModalOpen(true);
-}
-function handleCloseModal(){
-  setIsModalOpen(false);
-}
+  function handleOpenModal() {
+    setIsModalOpen(true);
+  }
+  function handleCloseModal() {
+    setIsModalOpen(false);
+  }
 
   return (
     <>
-      <Modal
-      isOpen={isModalOpen}
-      onRequestClose={handleCloseModal}
-      >
-        <h1>teste</h1>
-        <button onClick={handleCloseModal}>X</button>
-      </Modal>
-
+        <CartModal
+          isModalOpen={isModalOpen}
+          setIsModalOpen={setIsModalOpen}
+          handleCloseModal={handleCloseModal}
+        />
+        
       <div className={style.toolbar}>
         <div className={style.menu} onClick={openSidebar}>
           <FiMenu className={style.menuicon} />
@@ -41,7 +39,7 @@ function handleCloseModal(){
           </Link>
         </div>
         <div className={style.divlogout}>
-          <FiShoppingCart className={style.cart} onClick={handleOpenModal}/>
+          <FiShoppingCart className={style.cart} onClick={handleOpenModal} />
         </div>
       </div>
     </>

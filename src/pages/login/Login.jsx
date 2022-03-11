@@ -30,6 +30,7 @@ function Login() {
       })
       .catch(() => {
         console.log("Err");
+        toast.error("Não foi possivel realizar o login");
       });
   }, []);
 
