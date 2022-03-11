@@ -3,11 +3,11 @@ import Modal from 'react-modal'
 import style from './CartModal.module.scss'
 import {GrClose} from 'react-icons/gr';
 
-function CartModal(isModalOpen, setIsModalOpen, handleCloseModal) {
+function CartModal({isModalOpen, handleCloseModal}) {
 
   return (
     <Modal
-      isOpen={false}
+      isOpen={isModalOpen}
       onRequestClose={handleCloseModal}
       overlayClassName={style.modalOverlay}
       className={style.modalContent}
