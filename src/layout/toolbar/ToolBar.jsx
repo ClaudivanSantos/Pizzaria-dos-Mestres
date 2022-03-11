@@ -34,7 +34,7 @@ export default function ToolBar({ openSidebar }) {
           <Link to="/">
             <h1 className={style.h1logo}>
               Pizzari
-              <img src={logo} /> dos Mestres
+              <img src={logo} />dos Mestres
             </h1>
           </Link>
         </div>

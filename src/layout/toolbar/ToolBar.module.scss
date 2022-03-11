@@ -12,7 +12,7 @@
 .menuicon {
   font-size: 23px;
   cursor: pointer;
-  padding-left: 20px;
+  margin-left: 20px;
 }
 
 .menuicon:hover {
@@ -24,6 +24,7 @@
   width: 28px;
   height: 28px;
   margin-bottom: -2px;
+  margin-right: 8px;
 }
 
 .h1logo {
@@ -43,4 +44,43 @@
 
 .logout:hover {
   color: rgb(207, 203, 203);
+}
+
+@media(max-width:510px) {
+  .h1logo {
+    font-size: 19px;
+    display: flex;
+    justify-content: center;
+  }
+  .loginlogo img {
+    align-items: center;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media(max-width:361px) {
+  .h1logo {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+  }
+  .loginlogo img {
+    align-items: center;
+    width: 23px;
+    height: 23px;
+  }
+}
+
+@media(max-width:357px) {
+  .h1logo {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+  }
+  .loginlogo img {
+    align-items: center;
+    width: 23px;
+    height: 23px;
+  }
 }
