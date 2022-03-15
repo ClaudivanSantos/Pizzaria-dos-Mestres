@@ -14,7 +14,7 @@ function CartModal({isModalOpen, handleCloseModal}) {
       >
         <h3>Carrinho de compras</h3>
         <GrClose className={style.closeModal} onClick={handleCloseModal}/>
-        <p>lorem ipsum dolor sit amet, consectetur</p>
+        
       </Modal>
   )
 }

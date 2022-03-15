@@ -1,13 +1,13 @@
-import { Button } from "@mui/material";
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
 import Bars from "../../layout/bars/Bars";
 import style from "./Home.module.scss";
-import Pizza from "../../img/pizza.png";
 import axios from "axios";
+import { CartContext } from "../../Contexts/CartContext/CartContext";
 
 function Home() {
   const [pizzas, setPizzas] = useState([]);
+
+  const { handleAddItemToCart } = useContext(CartContext);
 
   useEffect(() => {
     axios
@@ -33,7 +33,7 @@ function Home() {
             return (
               <div key={key} className={style.card}>
                 <div className={style.divPizza}>
-                  <img className={style.pizza} src={Pizza} />
+                  <img className={style.pizza} src={pizza.img} />
                 </div>
 
                 <div className={style.infoPizza}>
@@ -42,8 +42,10 @@ function Home() {
                 </div>
 
                 <div className={style.btn}>
-                  <div className={style.addCart}>
-                      <button>Adicionar no carrinho</button>
+                  <div className={style.addCart} 
+                  onClick={() => handleAddItemToCart()}>
+
+                    <button>Adicionar no carrinho</button>
                   </div>
                 </div>
               </div>
