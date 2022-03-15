@@ -16,7 +16,7 @@
   width: 25%;
   max-width: 576px;
   background-color: white;
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 0.3rem;
   }
 
@@ -31,4 +31,24 @@
 
     transition: filter 0.2;
   }
+  .closeModal:hover{
+    font-size: 18px;
+  }
+
+  .divRemoveItem{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+    
+  }
+
+  .removeItem{
+    cursor: pointer;
+  }
+
+  .removeItem:hover{
+    font-size: 17px;
+  }
+
+  
   

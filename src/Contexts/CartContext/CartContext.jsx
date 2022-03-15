@@ -5,20 +5,20 @@ export const CartContext = createContext({});
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
-  function handleAddItemToCart() {
-    setCart([...cart]);
+  function handleAddItemToCart(id) {
+    const itemObject = {  };
   }
 
-  function handleRemoveItemfromCart(clickedItemIndex) {
-    const filteredCart = cart.filter(
-      (cartItem) => cart.IndexOf(cartItem) !== clickedItemIndex
-    );
-    setCart(filteredCart);
-  }
+  // function handleRemoveItemfromCart(id) {
+  //   const filterCart = cart.filter(
+  //     (cartItem) => cart.IndexOf(cartItem) !== id
+  //   );
+  //   setCart(filterCart);
+  // }
 
   function clearCart() {
     setCart([]);
   }
 
-  return <CartContext.Provider value={{cart, handleAddItemToCart, handleRemoveItemfromCart, clearCart}}>{children}</CartContext.Provider>;
+  return <CartContext.Provider value={{cart, handleAddItemToCart, clearCart}}>{children}</CartContext.Provider>;
 };

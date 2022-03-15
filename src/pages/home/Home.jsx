@@ -43,7 +43,7 @@ function Home() {
 
                 <div className={style.btn}>
                   <div className={style.addCart} 
-                  onClick={() => handleAddItemToCart()}>
+                  onClick={() => handleAddItemToCart(pizza.id)}>
 
                     <button>Adicionar no carrinho</button>
                   </div>
