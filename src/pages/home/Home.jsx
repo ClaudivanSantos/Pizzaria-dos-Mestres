@@ -6,7 +6,7 @@ import { CartContext } from "../../Contexts/CartContext/CartContext";
 
 function Home() {
   const [pizzas, setPizzas] = useState([]);
-
+  
   const { handleAddItemToCart } = useContext(CartContext);
 
   useEffect(() => {
@@ -38,12 +38,12 @@ function Home() {
 
                 <div className={style.infoPizza}>
                   <p className={style.descricao}>{pizza.name}</p>
-                  <p className={style.price}>{pizza.Price}</p>
+                  <p className={style.price}>R${pizza.price.toFixed(2)}</p>
                 </div>
 
                 <div className={style.btn}>
                   <div className={style.addCart} 
-                  onClick={() => handleAddItemToCart(pizza.id)}>
+                  onClick={() => handleAddItemToCart(pizza.id, pizza.price, pizza.name)}>
 
                     <button>Adicionar no carrinho</button>
                   </div>

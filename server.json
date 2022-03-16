@@ -2,7 +2,7 @@
   "pizzas": [
     {
       "name": "Pizza de Calabreza",
-      "Price": 50,
+      "price": 50,
       "img": "https://imagensemoldes.com.br/wp-content/uploads/2020/04/Imagem-Pizza-PNG.png",
       "id": "6265f1sdf"
     },
@@ -14,7 +14,7 @@
     },
     {
       "name": "Pizza Portuguesa",
-      "Price": 50,
+      "price": 50,
       "img": "https://imagensemoldes.com.br/wp-content/uploads/2020/04/Pizza-Hut-Pizza-PNG-1010x1024.png",
       "id": "6265f16s4fs"
     }
@@ -27,13 +27,18 @@
     },
     {
       "name": "Coca-cola lata",
-      "Price": 5,
+      "price": 5,
       "id": "651g514g65df1f"
     },
     {
       "name": "Pepsi lata",
-      "Price": 5,
-      "id": "84d89g4sd854scvc"
+      "price": 5,
+      "id": "84d89g4sd855415614scvc"
+    },
+    {
+      "name": "Coca-cola lata",
+      "price": 5,
+      "id": "651g5545415114g65df1f"
     }
   ],
   "users": [

@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FiMenu, FiShoppingCart } from "react-icons/fi";
-import { useHistory } from "react-router-dom";
 import CartModal from "../../components/CartModal/CartModal";
 
 import style from "./ToolBar.module.scss";
 import logo from "../../img/logo.png";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../Contexts/CartContext/CartContext";
 
 export default function ToolBar({ openSidebar }) {
-  const history = useHistory();
+  const { handleRemoveItemfromCart, cart } = useContext(CartContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   function handleOpenModal() {
@@ -40,6 +40,9 @@ export default function ToolBar({ openSidebar }) {
         </div>
         <div className={style.divlogout}>
           <FiShoppingCart className={style.cart} onClick={handleOpenModal} />
+          <div className={style.teste}>
+            {cart.length}
+          </div>
         </div>
       </div>
     </>
