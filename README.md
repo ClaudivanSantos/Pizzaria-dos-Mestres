@@ -10,8 +10,6 @@
 
 <img size="100%" src="https://i.ibb.co/h2Rc466/Captura-de-tela-2022-03-16-083320.png" alt="Captura-de-tela-2022-03-16-083320" />
 
-Para clonar o repositório usando HTTPS, em "Clonar com HTTPS", clique em copiar.
-
 ## 🤝 Clonar o projeto
 
 No GitHub.com, navegue até a página principal do repositório.
