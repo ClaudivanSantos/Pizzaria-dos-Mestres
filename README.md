@@ -1,16 +1,14 @@
 # 🚀 Pizzaria dos Mestres
 
 <p>
-  <img height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
+  <img height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
   <img alt="react" height="40" width="50"  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-  <img height="40" width="50" src="https://cdn.worldvectorlogo.com/logos/styled-components-1.svg">
+  <img height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" >
 </p>
 
 ## 📫 Visualização do projeto
 
 <img size="100%" src="https://i.ibb.co/h2Rc466/Captura-de-tela-2022-03-16-083320.png" alt="Captura-de-tela-2022-03-16-083320" />
-
-Para clonar o repositório usando HTTPS, em "Clonar com HTTPS", clique em copiar.
 
 ## 🤝 Clonar o projeto
 
