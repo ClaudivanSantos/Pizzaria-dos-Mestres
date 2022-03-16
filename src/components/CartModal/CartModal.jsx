@@ -3,12 +3,21 @@ import Modal from "react-modal";
 import style from "./CartModal.module.scss";
 import { GrClose } from "react-icons/gr";
 import { CartContext } from "../../Contexts/CartContext/CartContext";
+import toast, { Toaster } from "react-hot-toast";
+import { useHistory } from "react-router-dom";
 
 function CartModal({ isModalOpen, handleCloseModal }) {
-  const { handleRemoveItemfromCart, cart } = useContext(CartContext);
+  const { handleRemoveItemfromCart, cart, totalPrice } = useContext(CartContext);
+  const history = useHistory();  
 
-  const totalPrice = cart.reduce((acc, current) => acc + current.price, 0);
-
+  function handleValidateCart(e) {
+    if (totalPrice == 0) {
+      toast.error("Adicione ao menos um item no carrinho");
+      e.preventDefault()
+    }else{
+      history.push("/confirmpurchase");
+    }
+  }
   return (
     <Modal
       isOpen={isModalOpen}
@@ -19,10 +28,12 @@ function CartModal({ isModalOpen, handleCloseModal }) {
       <h3>Carrinho de compras</h3>
       <GrClose className={style.closeModal} onClick={handleCloseModal} />
 
+      <Toaster position="bottom-left" />
+
       {cart.map((cartItem, index) => {
         return (
           <div>
-            <div key={index} itemIndex={index} className={style.divRemoveItem}>
+            <div key={index} className={style.divRemoveItem}>
               <p>
                 {cartItem.name} - R$ {cartItem.price.toFixed(2)}
               </p>
@@ -37,7 +48,13 @@ function CartModal({ isModalOpen, handleCloseModal }) {
       <div>
         <h3>Total</h3>
         <h4>R$ {totalPrice.toFixed(2)}</h4>
-        <button className={style.btn} type="submit">Confirmar compra</button>
+          <button
+            className={style.btn}
+            type="submit"
+            onClick={() => handleValidateCart()}
+          >
+            Confirmar compra
+          </button>
       </div>
     </Modal>
   );

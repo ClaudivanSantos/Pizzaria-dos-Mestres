@@ -6,12 +6,11 @@ import { MdLock } from "react-icons/md";
 import { HiEye, HiEyeOff } from "react-icons/hi";
 import toast, { Toaster } from "react-hot-toast";
 
-import { useLogin } from "../../hooks/UseLogin";
 import style from "./Login.module.scss";
 import Logo from "../../img/logo.png";
 import { Link } from "react-router-dom";
 import { api } from "../../services/api";
-import Register from "../register/Register";
+
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -19,8 +18,6 @@ function Login() {
   const [users, setUsers] = useState([]);
   const [show, setShow] = useState(false);
   const history = useHistory();
-  const notify = () => toast("Here is your toast.");
-  const { logado, setLogado } = useLogin();
 
   useEffect(() => {
     api

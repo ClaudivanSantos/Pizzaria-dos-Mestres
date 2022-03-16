@@ -7,6 +7,8 @@ export const CartProvider = ({ children }) => {
   
   const [cart, setCart] = useState([]);
 
+  const totalPrice = cart.reduce((acc, current) => acc + current.price, 0);
+
   function handleAddItemToCart(id, price, name) {
     const itemObject = {id, price, name};
     setCart([...cart, itemObject])
@@ -17,7 +19,8 @@ export const CartProvider = ({ children }) => {
       (cartItem) => cart.indexOf(cartItem) !== clickedItemIndex
     )
       setCart(filteredCart);
+      console.log(cart)
   }
 
-  return <CartContext.Provider value={{cart, handleAddItemToCart, handleRemoveItemfromCart}}>{children}</CartContext.Provider>;
+  return <CartContext.Provider value={{cart, handleAddItemToCart, handleRemoveItemfromCart, totalPrice}}>{children}</CartContext.Provider>;
 };

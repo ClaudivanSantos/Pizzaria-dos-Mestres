@@ -23,22 +23,20 @@
     {
       "name": "Coca-cola 2l",
       "Price": 10,
+      "img": "https://cdn-0.imagensemoldes.com.br/wp-content/uploads/2020/05/Pet-2-Litros-Coca-Cola-PNG.png",
       "id": "d1g5d41g54ds"
     },
     {
       "name": "Coca-cola lata",
       "price": 5,
+      "img": "https://cdn-0.imagensemoldes.com.br/wp-content/uploads/2020/05/Lata-473-ml-Coca-Cola-PNG.png",
       "id": "651g514g65df1f"
     },
     {
       "name": "Pepsi lata",
       "price": 5,
+      "img": "https://s3-sa-east-1.amazonaws.com/loja2/776530409c6ca3de56445d1c51a5faa5.png",
       "id": "84d89g4sd855415614scvc"
-    },
-    {
-      "name": "Coca-cola lata",
-      "price": 5,
-      "id": "651g5545415114g65df1f"
     }
   ],
   "users": [
