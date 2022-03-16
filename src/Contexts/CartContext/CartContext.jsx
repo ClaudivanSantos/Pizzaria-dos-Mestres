@@ -19,9 +19,5 @@ export const CartProvider = ({ children }) => {
       setCart(filteredCart);
   }
 
-  function va() {
-    
-  }
-
   return <CartContext.Provider value={{cart, handleAddItemToCart, handleRemoveItemfromCart}}>{children}</CartContext.Provider>;
 };
