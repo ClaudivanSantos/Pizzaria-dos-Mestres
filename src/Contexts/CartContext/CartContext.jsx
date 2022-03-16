@@ -12,10 +12,11 @@ export const CartProvider = ({ children }) => {
     setCart([...cart, itemObject])
   }
  
-  function handleRemoveItemfromCart(id, cartItem) {
-console.log(id);
-
-setCart(cart.filter(cartItem=>cartItem.id !== id));
+  function handleRemoveItemfromCart(clickedItemIndex) {
+    const filteredCart= cart.filter(
+      (cartItem) => cart.indexOf(cartItem) !== clickedItemIndex
+    )
+      setCart(filteredCart);
   }
 
   function va() {

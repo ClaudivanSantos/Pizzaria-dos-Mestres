@@ -19,16 +19,16 @@ function CartModal({ isModalOpen, handleCloseModal }) {
       <h3>Carrinho de compras</h3>
       <GrClose className={style.closeModal} onClick={handleCloseModal} />
 
-      {cart.map((cartItem, id) => {
+      {cart.map((cartItem, index) => {
         return (
           <div>
-            <div key={id} className={style.divRemoveItem}>
+            <div key={index} itemIndex={index} className={style.divRemoveItem}>
               <p>
                 {cartItem.name} - R$ {cartItem.price.toFixed(2)}
               </p>
               <GrClose
                 className={style.removeItem}
-                onClick={() => handleRemoveItemfromCart(cartItem.id, cartItem)}
+                onClick={() => handleRemoveItemfromCart(index)}
               />
             </div>
           </div>
@@ -37,7 +37,7 @@ function CartModal({ isModalOpen, handleCloseModal }) {
       <div>
         <h3>Total</h3>
         <h4>R$ {totalPrice.toFixed(2)}</h4>
-        <button>Confirmar compra</button>
+        <button className={style.btn} type="submit">Confirmar compra</button>
       </div>
     </Modal>
   );
