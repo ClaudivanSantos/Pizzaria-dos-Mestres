@@ -3,11 +3,26 @@ import Bars from "../../layout/bars/Bars";
 import style from "./Home.module.scss";
 import axios from "axios";
 import { CartContext } from "../../Contexts/CartContext/CartContext";
+import TiketModal from "../../components/TiketModal/TiketModal";
 
 function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const [pizzas, setPizzas] = useState([]);
-  
-  const { handleAddItemToCart } = useContext(CartContext);
+
+  const { handleAddItemToTiket } = useContext(CartContext);
+
+  function handleOpenModal() {
+    setIsModalOpen(true);
+  }
+  function handleCloseTiketModal() {
+    setIsModalOpen(false);
+  }
+
+  function handleAddItemToTiketAndOpenModal(){
+    
+    
+  }
 
   useEffect(() => {
     axios
@@ -23,6 +38,11 @@ function Home() {
   return (
     <>
       <Bars />
+      <TiketModal
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+        handleCloseModal={handleCloseTiketModal}
+      />
       <div className={style.divTittle}>
         <h1 className={style.title}>Pizzas</h1>
       </div>
@@ -37,14 +57,11 @@ function Home() {
                 </div>
 
                 <div className={style.infoPizza}>
-                  <p className={style.descricao}>{pizza.name}</p>
-                  <p className={style.price}>R${pizza.price.toFixed(2)}</p>
+                  <p className={style.name}>{pizza.name}</p>
                 </div>
 
                 <div className={style.btn}>
-                  <div className={style.addCart} 
-                  onClick={() => handleAddItemToCart(pizza.id, pizza.price, pizza.name)}>
-
+                  <div className={style.addCart} onClick={() => {handleAddItemToTiket(pizza.id, pizza.name, pizza.img, pizza.price); handleOpenModal(); }}>
                     <button>Adicionar no carrinho</button>
                   </div>
                 </div>

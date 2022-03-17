@@ -6,21 +6,34 @@ export const CartContext = createContext({});
 export const CartProvider = ({ children }) => {
   
   const [cart, setCart] = useState([]);
+  const [tiket, setTiket] = useState([]);
+  const [qtdItem, setQtdItem] = useState(1);
 
-  const totalPrice = cart.reduce((acc, current) => acc + current.price, 0);
+  console.log(cart);
+
+  const totalPriceTiket = tiket.reduce((acc, current) => acc + current.price * qtdItem, 0);
+
+  function handleAddItemToTiket(id, name, img, price) {
+    const itemObject = {id, name, img, price};
+    setTiket([ itemObject])
+  }
+
+  function handleRemoveItemToTiket(clickedItemTiket) {
+    setTiket([]);
+    
+  }
 
   function handleAddItemToCart(id, price, name) {
     const itemObject = {id, price, name};
     setCart([...cart, itemObject])
   }
- 
-  function handleRemoveItemfromCart(clickedItemIndex) {
+   
+  function handleRemoveItemfromCart(clickedItemCart) {
     const filteredCart= cart.filter(
-      (cartItem) => cart.indexOf(cartItem) !== clickedItemIndex
+      (cartItem) => cart.indexOf(cartItem) !== clickedItemCart
     )
       setCart(filteredCart);
-      console.log(cart)
   }
 
-  return <CartContext.Provider value={{cart, handleAddItemToCart, handleRemoveItemfromCart, totalPrice}}>{children}</CartContext.Provider>;
+  return <CartContext.Provider value={{cart, handleAddItemToTiket, handleRemoveItemToTiket, qtdItem, setQtdItem, tiket, qtdItem, setQtdItem, totalPriceTiket, setCart, handleAddItemToCart}}>{children}</CartContext.Provider>;
 };

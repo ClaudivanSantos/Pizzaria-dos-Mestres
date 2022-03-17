@@ -5,24 +5,27 @@
   bottom: 0;
   right: 0;
   left: 0;
-  padding: 20px;
+  padding: 50px;
 
   display: flex;
-  align-items: flex-start;
-  justify-content: right;
+  justify-content: center;
 }
 
 .modalContent {
-  width: 30%;
+  width: 100%;
   max-width: 576px;
+  height: auto;
   background-color: white;
   padding: 2rem;
   border-radius: 0.3rem;
 }
 
-.divQtdPizza {
+.header{
+  margin-left: 50px;
+  margin-right: 50px;
   display: flex;
-  justify-content: right;
+  justify-content:space-between;
+  align-items: center;
 }
 
 .closeModal {
@@ -36,18 +39,19 @@
 
   transition: filter 0.2;
 }
-.closeModal:hover {
-  font-size: 18px;
+
+.imgTiket {
+  width: 150px;
 }
 
-.divRemoveItem {
+.divQtdItens{
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.qtdItens{
   display: flex;
-  justify-content: space-between;
-  margin: 15px;
-}
-
-.removeItem {
-  cursor: pointer;
+  margin: 20px;
 }
 
 .btn {
