@@ -7,7 +7,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 function CartModal({ isModalOpen, handleCloseModal }) {
   
-  const { handleRemoveItemfromCart, cart} =
+  const { handleAddItemToCart, handleRemoveItemfromCart, cart} =
     useContext(CartContext);
 
   return (

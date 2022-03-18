@@ -18,7 +18,7 @@ export const CartProvider = ({ children }) => {
     setTiket([ itemObject])
   }
 
-  function handleRemoveItemToTiket(clickedItemTiket) {
+  function handleRemoveItemToTiket() {
     setTiket([]);
     
   }
@@ -35,5 +35,5 @@ export const CartProvider = ({ children }) => {
       setCart(filteredCart);
   }
 
-  return <CartContext.Provider value={{cart, handleAddItemToTiket, handleRemoveItemToTiket, qtdItem, setQtdItem, tiket, qtdItem, setQtdItem, totalPriceTiket, setCart, handleAddItemToCart}}>{children}</CartContext.Provider>;
+  return <CartContext.Provider value={{cart, handleAddItemToTiket, handleRemoveItemToTiket, qtdItem, setQtdItem, tiket, qtdItem, setQtdItem, totalPriceTiket, setCart, handleAddItemToCart, handleRemoveItemfromCart}}>{children}</CartContext.Provider>;
 };

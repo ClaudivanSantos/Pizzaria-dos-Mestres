@@ -7,15 +7,30 @@ import { CartContext } from "../../Contexts/CartContext/CartContext";
 import style from "./TiketModal.module.scss";
 
 function TiketModal({ isModalOpen, handleCloseModal }) {
-  const { tiket, qtdItem, setQtdItem, handleAddItemToCart, handleRemoveItemToTiket, totalPriceTiket, cart, setCart } = useContext(CartContext);
+  const {
+    tiket,
+    qtdItem,
+    setQtdItem,
+    handleAddItemToCart,
+    handleRemoveItemToTiket,
+    totalPriceTiket,
+    cart,
+    setCart,
+  } = useContext(CartContext);
 
   function addQtdItem() {
     setQtdItem(qtdItem + 1);
   }
+
+  function closeAndCleanModal(){
+    handleCloseModal();
+    setQtdItem(1)
+  }
+
   function removeQtdPizza() {
     if (qtdItem == 1) {
-        handleRemoveItemToTiket();
-        handleCloseModal();
+      handleRemoveItemToTiket();
+      handleCloseModal();
     } else {
       setQtdItem(qtdItem - 1);
     }
@@ -24,7 +39,7 @@ function TiketModal({ isModalOpen, handleCloseModal }) {
   return (
     <Modal
       isOpen={isModalOpen}
-      onRequestClose={handleCloseModal}
+      onRequestClose={closeAndCleanModal}
       overlayClassName={style.modalOverlay}
       className={style.modalContent}
     >
@@ -39,8 +54,8 @@ function TiketModal({ isModalOpen, handleCloseModal }) {
               <h2>{tiketItem.name}</h2>
               <img className={style.imgTiket} src={tiketItem.img} />
             </div>
-              <p>Selecione a quantidade de itens:</p>
-              <div className={style.qtdItens}>
+            <p>Selecione a quantidade de itens:</p>
+            <div className={style.qtdItens}>
               <div>
                 <button onClick={() => removeQtdPizza()}>-</button>
               </div>
@@ -50,18 +65,24 @@ function TiketModal({ isModalOpen, handleCloseModal }) {
               <div>
                 <button onClick={() => addQtdItem()}>+</button>
               </div>
-              </div>
+            </div>
+            <div>
+              <h3>Total</h3>
+              <h4>{totalPriceTiket}</h4>
+              <button
+                className={style.btn}
+                type="submit"
+                onClick={() => {
+                  handleAddItemToCart(tiketItem.id, tiketItem.name, tiketItem.name);
+                  handleCloseModal();
+                }}
+              >
+                Confirmar
+              </button>
+            </div>
           </div>
         );
       })}
-
-      <div>
-        <h3>Total</h3>
-        <h4>{totalPriceTiket}</h4>
-        <button className={style.btn} type="submit" onClick={() => {handleAddItemToCart(tiket); handleCloseModal(); }}>
-          Confirmar
-        </button>
-      </div>
     </Modal>
   );
 }
